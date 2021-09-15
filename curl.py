@@ -12,11 +12,11 @@ ARG_CNT = len(sys.argv) - 1
 if ARG_CNT != 1:
     print('Usage: curl [URL]...')
 """if value of ARG_CNT is equal to 1 then a variable "URL" is created and user speacified url is stored 
-in URL , then if the URL doesnt have 'http' then it appends http:// to the start of the URL and 
-stores in URL variable """
+in URL"""
 if ARG_CNT == 1:
     URL = sys.argv[1]
+    """then if the URL variable doesnt have 'http' then it appends http:// to the start of the URL and 
+stores in URL variable otherwirse it prints curl function with URL As argument"""
     if 'http' not in URL[:5]:
         URL = "http://"+URL
-        """It prints curl function which takes URL as argument"""
     print(curl(URL))
